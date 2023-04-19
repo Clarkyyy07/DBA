@@ -1,0 +1,82 @@
+1. Print Duplicate elements[5, 1, 4, 6, 7, 3, 5, 7, 3] //
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {5, 1, 4, 6, 7, 3, 5, 7, 3};
+
+        System.out.print("Duplicate elements in the array: ");
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int a = i + 1; a < arr.length; a++) {
+                if (arr[i] == arr[a]) {
+                    System.out.print(arr[a] + " ");
+                }
+            }
+        }
+    }
+}
+====================================================================
+2. Print
+public class Main {
+    public static void main(String[] args) {
+        int[][] arr = new int[7][7];
+        
+        for (int a = 0; a < 7; a++) {
+            for (int b = 0; b <= a; b++) {
+                arr[a][b] = a + 1;
+                System.out.print(arr[a][b] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+===================================================================
+3.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter the number of newly hired males:");
+        int newMale = scanner.nextInt();
+        
+        System.out.println("Enter the number of newly hired females:");
+        int newFemale = scanner.nextInt();
+        
+        System.out.println("Enter the number of male employees in permanent position males:");
+        int permMale = scanner.nextInt();
+        
+        System.out.println("Enter the number of female employees in permanent position females:");
+        int permFemale = scanner.nextInt();
+        
+        System.out.println("Enter the number of resigned males:");
+        int resignedMale = scanner.nextInt();
+        
+        System.out.println("Enter the number of resigned females:");
+        int resignedFemale = scanner.nextInt();
+        
+        int totalNew = newMale + newFemale;
+        int totalPerm = permMale + permFemale;
+        int totalResigned = resignedMale + resignedFemale;
+        
+        double percentNewMale = ((double) newMale / totalNew) * 100;
+        double percentNewFemale = ((double) newFemale / totalNew) * 100;
+        double percentPermMale = ((double) permMale / totalPerm) * 100;
+        double percentPermFemale = ((double) permFemale / totalPerm) * 100;
+        double percentResignedMale = ((double) resignedMale / totalResigned) * 100;
+        double percentResignedFemale = ((double) resignedFemale / totalResigned) * 100;
+        
+     
+        System.out.println("Total newly hired employees: " + totalNew);
+        System.out.println("Percentage of newly hired males: " + percentNewMale + "%");
+        System.out.println("Percentage of newly hired females: " + percentNewFemale + "%");
+        
+        System.out.println("Total permanent employees: " + totalPerm);
+        System.out.println("Percentage of permanent males: " + percentPermMale + "%");
+        System.out.println("Percentage of permanent females: " + percentPermFemale + "%");
+        
+        System.out.println("Total resigned employees: " + totalResigned);
+        System.out.println("Percentage of resigned males: " + percentResignedMale + "%");
+        System.out.println("Percentage of resigned females: " + percentResignedFemale + "%");
+    }
+}
